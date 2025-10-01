@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keyframe Basic</title>
+
+  <style>
+    :root {
+        --div-width: 220px;
+        --div-height: 110px;
+    }
+
+    div{
+        width: var(--div-width);
+        height: var(--div-height);
+        background: blue;
+        border-radius: 20px;
+        margin: 20px;
+
+        animation-name: move;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    @keyframes move {
+        0%{
+            margin: 20px;
+            transform: rotate(0);
+        }
+
+        25%{
+            margin-left: calc(100vw - var(--div-width) - 20px);
+            margin-top: 20px;
+            background: yellow;
+            transform: rotate(180deg);
+
+
+        }
+
+        50%{
+            margin-left: calc(100vw - var(--div-width) - 20px);
+            margin-top: calc(100vh - var(--div-height) - 20px);
+            background: red;
+            transform: rotate(180deg);
+        }
+
+        75%{
+            margin-top: calc(100vh - var(--div-height) - 20px);
+            margin-left: 20px;
+            background: greenyellow;
+            transform: rotate(360deg);
+
+        }
+        100%{
+            margin: 20px;
+            background: deepskyblue;
+            transform: rotate(360deg);
+        }
+    }
+
+  </style>
+
+</head>
+<body>
+<div></div>
+
+</body>
+</html>
