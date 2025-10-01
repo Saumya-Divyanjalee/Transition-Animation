@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circle Transition</title>
+    <style>
+
+        body{
+            background: lightskyblue;
+
+
+        }
+
+        .cir2{
+            height: 400px;
+            width: 400px;
+            background: grey;
+            border-radius: 50%;
+
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+
+            aspect-ratio: 1/1;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* It moves the word to the center of the circle */
+
+            z-index:1;
+        }
+
+        .cir1{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+
+
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            border: white 20px solid;
+            border-top: red 20px solid;
+
+            transition: transform 1s;
+            z-index: 2;
+        }
+
+        .cir1:hover{
+            animation-name: move;
+            animation-duration: 1s;
+        }
+
+        @keyframes move {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="cir1"></div>
+    <div class="cir2">RWAD</div>
+
+
+
+</body>
+</html>
