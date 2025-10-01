@@ -3,8 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS Slider Animation</title>
+
+    <style>
+        *{
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        section{
+            position:absolute;
+            width: 400vw;
+            height: 400vh;
+            display: flex;
+
+
+            animation-name: animate;
+            animation-duration: 11s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+
+        }
+
+        img{
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+
+        @keyframes animate {
+            0%{
+                margin-left: 100vw;
+            }
+            33.33% {
+                margin-left: -100vw;
+            }
+            66.66% {
+                margin-left: -200vw;
+            }
+            100% {
+                margin-left: -300vw;
+            }
+        }
+    </style>
 </head>
 <body>
+
+<section>
+    <div><img src="assets/images/pexels-eberhardgross-1064162.jpg" alt="slide1"></div>
+    <div><img src="assets/images/pexels-fotios-photos-109260.jpg" alt="slide2"></div>
+    <div><img src="assets/images/pexels-pixabay-33109.jpg" alt="slide3"></div>
+    <div><img src="assets/images/pexels-therato-1933320.jpg" alt="slide4"></div>
+
+</section>
 
 </body>
 </html>
